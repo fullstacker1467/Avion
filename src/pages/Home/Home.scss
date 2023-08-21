@@ -1,0 +1,43 @@
+.home {
+  height: 100vh;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background: linear-gradient(to right , rgba(0, 0, 0, 0.514) ,rgba(0, 0, 0, 0.5)), url("https://cdn.habitusliving.com/wp-content/uploads/1.smallroomfeat.jpg");
+}
+
+@media screen and (max-width:800px) {
+  .home{
+    height: 70vh;
+    .container{
+      .wrapper{
+        width: 100%;
+        gap: 25px;
+        h1{
+          font-size: 35px;
+        }
+        a{
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:400px){
+  .home{
+  .container{
+      .wrapper{
+      h1{
+        font-size: 25px;
+      }
+      h3{
+        font-size: 13px;
+      }
+      a{
+        padding: 5px 10px;
+        font-size: 15px;
+      }
+    }
+  }
+  }
+}

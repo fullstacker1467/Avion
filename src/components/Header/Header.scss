@@ -1,0 +1,42 @@
+header {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 90px;
+  .user {
+    .navhandler {
+      display: none;
+      cursor: pointer;
+      &:hover {
+        color: slategray;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 820px) {
+  header {
+    .container {
+      .menu {
+        width: 100%;
+        flex-direction: column;
+        height: 90vh;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 90px;
+        background: slategray;
+        color: white;
+      }
+      .menu.active {
+        left: -100%;
+      }
+      .left {
+        .user {
+          .navhandler {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

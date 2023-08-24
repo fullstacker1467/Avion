@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.scss";
 
-function Header({ logo }) {
+function Header() {
   const [tap, setTap] = useState(true);
   const navHandler = () => {
     setTap(!tap);
   };
   return (
-    <header className="flex items-center sticky left-0 top-0 bg-slate-200">
+    <header className="flex items-center sticky z-50 left-0 top-0 bg-slate-200">
       <div className="container flex justify-between items-center">
-        <Link to={"/"}>
-          <img className="logo" src={logo} />
+        <Link to={"/"} className="text-3xl">
+          Avion
         </Link>
         <div className="left flex gap-[150px] items-center">
           <div className={`${tap ? "active" : null} menu flex gap-10`}>

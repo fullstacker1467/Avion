@@ -15,6 +15,22 @@
   margin: 0 auto;
 }
 
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #c1c1c1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(88, 141, 162);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: slategray;
+}
+
 @media screen and (max-width: 1400px) {
   .container {
     width: 100%;

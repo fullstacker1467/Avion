@@ -13,7 +13,7 @@ function Card({ title, body, id, icon }) {
     <>
       <div
         data-aos="fade-up"
-        className="card sm:w-full md:w-1/2 lg:w-1/4 p-5 text-center flex flex-col gap-5"
+        className="card sm:w-full md:w-1/2 lg:w-1/4 p-5 flex flex-col gap-5"
       >
         <i className={`${icon} text-3xl`}></i>
         <h2 className="text-xl">{title}</h2>

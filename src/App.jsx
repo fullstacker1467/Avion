@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
-import logo from "./img/Avion.png";
 import Home from "./pages/Home/home";
 import Basket from "./pages/Basket/Basket";
 import Product from "./pages/Products/Product";
@@ -13,7 +12,7 @@ import ProductID from "./pages/Products/ProductID/ProductID";
 function App() {
   return (
     <>
-      <Header logo={logo} />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/basket" element={<Basket />} />

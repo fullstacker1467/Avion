@@ -154,15 +154,25 @@ function Home() {
         </div>
       </div>
       <div className="join">
-        <div className="container">
-          <h1>Join the club and get the benefits</h1>
-          <p>
-            Sign up for our newsletter and receive exclusive offers on new
-            ranges, sales, pop up stores and more
-          </p>
-          <div className="input-field">
-            <input type="text" />
-            <Link to={'/user'}></Link>
+        <div className="container flex justify-center items-center">
+          <div className="flex flex-col items-center justify-center py-24 gap-3">
+            <h1 className="text-4xl text-blue-950">
+              Join the club and get the benefits
+            </h1>
+            <p className="text-sm">
+              Sign up for our newsletter and receive exclusive offers on new
+              ranges, sales, pop up stores and more
+            </p>
+            <div className="input-field flex bg-slate-100">
+              <input
+                type="text"
+                placeholder="Your@gmail.com"
+                className="bg-transparent py-3 px-4 outline-none"
+              />
+              <Link to={"/user"} className="bg-blue-950 py-3 px-4 text-white">
+                Sign up
+              </Link>
+            </div>
           </div>
         </div>
       </div>

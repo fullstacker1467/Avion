@@ -8,6 +8,7 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import User from "./pages/User/User";
 import ProductID from "./pages/Products/ProductID/ProductID";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/user" element={<User />} />
       </Routes>
+      <Footer />
     </>
   );
 }

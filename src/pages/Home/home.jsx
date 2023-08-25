@@ -66,8 +66,8 @@ function Home() {
   }, []);
   return (
     <>
-      <div className="home">
-        <div className="container h-full flex justify-end items-center">
+      <div className="home py-24">
+        <div className="container flex justify-end items-center">
           <div
             data-aos="fade-right"
             className="wrapper bg-slate-200 rounded-sm w-7/12 p-10 flex flex-col items-start gap-20"
@@ -126,8 +126,43 @@ function Home() {
               to={"/product"}
               className="border-2 border-slate-800 py-3 px-7 hover:bg-slate-800 hover:text-white"
             >
-              Veiw collection 
+              Veiw collection
             </Link>
+          </div>
+        </div>
+      </div>
+      <div className="idea my-10">
+        <div className="container flex flex-wrap">
+          <div className="left w-full md:w-1/2 text-white bg-blue-950 p-10 flex flex-col justify-between items-start gap-20">
+            <div className="flex flex-col gap-5">
+              <h1 className="text-3xl md:text-4xl">
+                It started with a small idea
+              </h1>
+              <h3 className="text-sm md:text-xl">
+                A global brand with local beginnings, our story begain in a
+                small studio in South London in early 2014
+              </h3>
+            </div>
+            <Link
+              to={"/product"}
+              className="py-3 px-7 bg-slate-200 bg-opacity-20 hover:bg-slate-600"
+            >
+              Veiw collection
+            </Link>
+          </div>
+          <img className="w-full md:w-1/2" src="./img/sofa.png" />
+        </div>
+      </div>
+      <div className="join">
+        <div className="container">
+          <h1>Join the club and get the benefits</h1>
+          <p>
+            Sign up for our newsletter and receive exclusive offers on new
+            ranges, sales, pop up stores and more
+          </p>
+          <div className="input-field">
+            <input type="text" />
+            <Link to={'/user'}></Link>
           </div>
         </div>
       </div>

@@ -8,11 +8,14 @@
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
   transition: all ease-in .2s;
+  user-select: none;
+  scroll-behavior: smooth;
 }
 
 .container {
   width: 1400px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {

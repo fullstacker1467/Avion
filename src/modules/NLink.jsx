@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const NLink = ({item}) => {
+export const NLink = ({item , nav}) => {
   return (
-      <Link to={item.to}>{item.title}</Link>
+      <Link onClick={nav} to={item.to}>{item.title}</Link>
   )
 }

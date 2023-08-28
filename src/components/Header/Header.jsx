@@ -20,7 +20,7 @@ function Header() {
         <div className="left flex gap-[150px] items-center">
           <div className={`${tap ? "active" : null} menu flex gap-10`}>
             {NavItems.map((item, index) => {
-              return <NLink key={index} item={item} />;
+              return <NLink key={index} item={item} nav={navHandler} />;
             })}
           </div>
           <div className="user flex items-center gap-4 text-lg">

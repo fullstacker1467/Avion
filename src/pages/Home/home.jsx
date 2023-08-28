@@ -40,12 +40,7 @@ function Home() {
           </h1>
           <div className="flex flex-wrap md:flex-row md:gap-0">
             {fakeApi.map((item, index) => {
-              return (
-                <Card
-                  key={index}
-                  item={item}
-                />
-              );
+              return <Card key={index} item={item} />;
             })}
           </div>
         </div>
@@ -54,14 +49,11 @@ function Home() {
         <div className="container">
           <h1 className="m-5 text-3xl">New Ceramics</h1>
           <div className="flex flex-wrap md:flex-row md:gap-0">
-            {cerApi.map((item, index) => {
-              return (
-                <Ceramic
-                  key={index}
-                  item={item}
-                />
-              );
-            })}
+            {cerApi
+              .map((item, index) => {
+                return <Ceramic key={index} item={item} />;
+              })
+              .slice(0, 4)}
           </div>
           <div className="flex justify-center py-10">
             <Link

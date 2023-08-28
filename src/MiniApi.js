@@ -65,6 +65,30 @@ export const cerApi = [
     title: "The Lucy Lamp",
     price: "399",
   },
+  {
+    id: 5,
+    img: "./img/p5.png",
+    title: "The Lucy Lamp",
+    price: "399",
+  },
+  {
+    id: 6,
+    img: "./img/p6.png",
+    title: "The Lucy Lamp",
+    price: "399",
+  },
+  {
+    id: 7,
+    img: "./img/p7.png",
+    title: "The Lucy Lamp",
+    price: "399",
+  },
+  {
+    id: 8,
+    img: "./img/p8.png",
+    title: "The Lucy Lamp",
+    price: "399",
+  },
 ];
 export const NavItems = [
   {

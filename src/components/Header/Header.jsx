@@ -10,7 +10,7 @@ function Header() {
     setTap(!tap);
   };
   return (
-    <header className="flex items-center sticky z-50 left-0 top-0 bg-slate-200">
+    <header className="flex items-center sticky z-50 left-0 top-0 bg-white">
       <div className="container flex justify-between items-center">
         <Link to={"/"} className="text-3xl">
           Avion

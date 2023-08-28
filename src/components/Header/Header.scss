@@ -1,9 +1,10 @@
 header {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  height: 90px;
+  height: 70px;
   .user {
     .navhandler {
       display: none;
+      font-size: 23px;
       cursor: pointer;
       &:hover {
         color: slategray;

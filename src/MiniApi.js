@@ -1,4 +1,3 @@
-const id = new Date().getTime();
 export const miniData = [
   "fa-brands fa-linkedin",
   "fa-brands fa-instagram",
@@ -17,25 +16,25 @@ export const categories = [
 export const aboutUs = ["About us", "Vacancies", "Contact us", "Privacy"];
 export const fakeApi = [
   {
-    id,
+    id: 1,
     icon: "fa-solid fa-truck-fast",
     title: "Next day as standard",
     body: `Order before 3pm and get your order the next day as standard`,
   },
   {
-    id,
+    id: 2,
     icon: "fa-regular fa-circle-check",
     title: "Made by true artisans",
     body: `Handmade crafted goods made with real passion and craftmanship`,
   },
   {
-    id,
+    id: 3,
     icon: "fa-regular fa-credit-card",
     title: "Unbeatable prices",
     body: `For our materials and quality you wont find better prices anywhere`,
   },
   {
-    id,
+    id: 4,
     icon: "fa-brands fa-pagelines",
     title: "Recycled packaging",
     body: `We use 100% recycled packaging to ensure our footprint is manageable/*  */`,
@@ -43,25 +42,25 @@ export const fakeApi = [
 ];
 export const cerApi = [
   {
-    id,
+    id: 1,
     img: "./img/p1.png",
     title: "The Dandy chair",
     price: "250",
   },
   {
-    id,
+    id: 2,
     img: "./img/p2.png",
     title: "Rustic Vase Set",
     price: "155",
   },
   {
-    id,
+    id: 3,
     img: "./img/p3.png",
     title: "The Silky Vase",
     price: "125",
   },
   {
-    id,
+    id: 4,
     img: "./img/p4.png",
     title: "The Lucy Lamp",
     price: "399",

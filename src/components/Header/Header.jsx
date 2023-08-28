@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { NavItems } from "../../MiniApi";
 import "./Header.scss";
+import { NLink } from "../../modules/NLink";
 
 function Header() {
   const [tap, setTap] = useState(true);
@@ -15,10 +17,9 @@ function Header() {
         </Link>
         <div className="left flex gap-[150px] items-center">
           <div className={`${tap ? "active" : null} menu flex gap-10`}>
-            <Link to={"/"}>Home</Link>
-            <Link to={"/product"}>Product</Link>
-            <Link to={"/contact"}>Contact</Link>
-            <Link to={"/about"}>About us</Link>
+            {NavItems.map((item, index) => {
+              return <NLink key={index} item={item} />;
+            })}
           </div>
           <div className="user flex items-center gap-4 text-lg">
             <Link to={"/basket"}>

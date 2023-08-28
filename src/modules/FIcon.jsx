@@ -1,5 +1,5 @@
 import React from "react";
-export const ALink = ({item}) => {
+export const FIcon = ({ item }) => {
   return (
     <>
       <a href="#">

@@ -1,15 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ALink } from "../../modules/Link";
+import { FIcon } from "../../modules/FIcon";
+import { Categor } from "../../modules/Categor";
+import { AboutUs } from "../../modules/AboutUs";
+import { categories } from "../../MiniApi";
+import { aboutUs } from "../../MiniApi";
+import { miniData } from "../../MiniApi";
+
 import "./Footer.scss";
-const icons = [
-  "fa-brands fa-linkedin",
-  "fa-brands fa-instagram",
-  "fa-brands fa-square-facebook",
-  "fa-brands fa-skype",
-  "fa-brands fa-twitter",
-  "fa-brands fa-pinterest",
-];
 
 function Footer() {
   return (
@@ -18,17 +16,15 @@ function Footer() {
         <div className="container gap-10 md:gap-0 py-10 flex flex-wrap justify-between items-center bg-blue-950">
           <ul className="text-slate-300 flex flex-col gap-2 w-full md:w-1/3">
             <h2 className="text-2xl cursor-default">Categories</h2>
-            <Link>Furniture</Link>
-            <Link>Homeware</Link>
-            <Link>Plant pots</Link>
-            <Link>Chairs</Link>
+            {categories.map((item, index) => {
+              return <Categor key={index} item={item} />;
+            })}
           </ul>
           <ul className="text-slate-300 flex flex-col gap-2 w-full md:w-1/3">
             <h2 className="text-2xl cursor-default">Our Company</h2>
-            <Link>About us</Link>
-            <Link>Vacancies</Link>
-            <Link>Contact us</Link>
-            <Link>Privacy</Link>
+            {aboutUs.map((item, index) => {
+              return <AboutUs key={index} item={item} />;
+            })}
           </ul>
           <div
             className="input-field flex items-center text-white bg-slate-200 bg-opacity-20 w-full md:w-1/3
@@ -49,8 +45,8 @@ function Footer() {
             Copyright 2022 Avion LTD
           </h3>
           <div className="flex gap-4 text-2xl w-full md:w-1/2 justify-center md:justify-end">
-            {icons.map((item, index) => {
-              return <ALink key={index} item={item} />;
+            {miniData.map((item, index) => {
+              return <FIcon key={index} item={item} />;
             })}
           </div>
         </div>

@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-function Card({ title, body, id, icon }) {
+function Card({ item }) {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -15,9 +15,9 @@ function Card({ title, body, id, icon }) {
         data-aos="fade-up"
         className="card sm:w-full md:w-1/2 lg:w-1/4 p-5 flex flex-col gap-5"
       >
-        <i className={`${icon} text-3xl`}></i>
-        <h2 className="text-xl">{title}</h2>
-        <p className="text-sm">{body}</p>
+        <i className={`${item.icon} text-3xl`}></i>
+        <h2 className="text-xl">{item.title}</h2>
+        <p className="text-sm">{item.body}</p>
       </div>
     </>
   );

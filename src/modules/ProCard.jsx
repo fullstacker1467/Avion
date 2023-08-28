@@ -11,6 +11,7 @@ export const ProCard = ({ item }) => {
 
   const Card = useContext(useCard);
   const [active, setActive] = useState(false);
+  const [activ, setActiv] = useState(false);
   const AddBacket = useCallback(
     (e) => {
       let abs = Card.data.find((fin) => fin.id == e.id);
@@ -34,10 +35,20 @@ export const ProCard = ({ item }) => {
           <div className="px-2">
             <div className="flex justify-between items-center">
               <h2 className="text-xl">{item.title}</h2>
-              {!active ? (
-                <i className="fa-regular fa-star text-2xl"></i>
+              {!activ ? (
+                <i
+                  onClick={() => {
+                    setActiv(!activ ? true : false);
+                  }}
+                  className="fa-regular fa-star text-2xl"
+                ></i>
               ) : (
-                <i class="fa-solid fa-star text-2xl text-yellow-500"></i>
+                <i
+                  onClick={() => {
+                    setActiv(!activ ? true : false);
+                  }}
+                  class="fa-solid fa-star text-2xl text-yellow-500"
+                ></i>
               )}
             </div>
             <div className="flex justify-between items-center py-3 my-2 border-t-2 border-slate-600">
@@ -53,9 +64,9 @@ export const ProCard = ({ item }) => {
               >
                 {active ? `Added To Card` : `Add To Card`}
                 {active ? (
-                  <i class="fa-solid fa-check mx-2"></i>
+                  <i className="fa-solid fa-check mx-2"></i>
                 ) : (
-                  <i class="fa-solid fa-bag-shopping mx-2"></i>
+                  <i className="fa-solid fa-bag-shopping mx-2"></i>
                 )}
               </button>
             </div>

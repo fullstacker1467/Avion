@@ -26,7 +26,7 @@ function Header() {
           <div className="user flex items-center gap-4 text-lg">
             <Link className="relative" to={"/basket"}>
               <span className="absolute top-[-10px] left-[-15px] text-sm rounded-full text-white bg-blue-500 px-2">
-                {Card.data.length <= 0 ? '' : Card.data.length}
+                {Card.data.length <= 0 ? "" : Card.data.length}
               </span>
               <i className="text-2xl fa-solid fa-cart-shopping text-slate-800 cursor-pointer hover:text-slate-500"></i>
             </Link>

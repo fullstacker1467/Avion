@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { NavItems } from "../../MiniApi";
 import { NLink } from "../../modules/NLink";
+import { useCard } from "../../context/CardContext";
 import "./Header.scss";
 
 function Header() {
+  const Card = useContext(useCard);
   const [tap, setTap] = useState(true);
   const navHandler = () => {
     setTap(!tap);
@@ -22,11 +24,14 @@ function Header() {
             })}
           </div>
           <div className="user flex items-center gap-4 text-lg">
-            <Link to={"/basket"}>
-              <i className="fa-solid fa-cart-shopping text-slate-900 cursor-pointer hover:text-slate-500"></i>
+            <Link className="relative" to={"/basket"}>
+              <span className="absolute top-[-10px] left-[-15px] text-sm rounded-full text-white bg-blue-500 px-2">
+                {Card.data.length <= 0 ? '' : Card.data.length}
+              </span>
+              <i className="text-2xl fa-solid fa-cart-shopping text-slate-800 cursor-pointer hover:text-slate-500"></i>
             </Link>
             <Link to={"/user"}>
-              <i className="fa-solid fa-user text-slate-900 cursor-pointer hover:text-slate-500"></i>
+              <i className="text-2xl fa-solid fa-user text-slate-800 cursor-pointer hover:text-slate-500"></i>
             </Link>
             <i
               onClick={navHandler}

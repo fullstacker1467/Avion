@@ -9,21 +9,23 @@ import User from "./pages/User/User";
 import Footer from "./components/Footer/Footer";
 import { About } from "./pages/About/About";
 
-
+import CardContext from "./context/CardContext";
 
 function App() {
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/basket" element={<Basket />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About/>} />
-        <Route path="/user" element={<User />} />
-      </Routes>
-      <Footer />
+      <CardContext>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/basket" element={<Basket />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/user" element={<User />} />
+        </Routes>
+        <Footer />
+      </CardContext>
     </>
   );
 }

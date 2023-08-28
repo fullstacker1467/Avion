@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Product.scss";
 import { cerApi } from "../../MiniApi";
 import { ProCard } from "../../modules/ProCard";
+import { useCard } from "../../context/CardContext";
 
 function Product() {
+  const Card = useContext(useCard);
+  // console.log(Card.data);
   return (
     <>
       <div className="product">
@@ -21,7 +24,11 @@ function Product() {
             </div>
             <div className="w-full md:w-1/2 flex gap-4 items-center border-2 border-slate-500 p-2 rounded-md">
               <i className="fa-solid fa-magnifying-glass w-[15px]"></i>
-              <input className="outline-none w-11/12" type="text" placeholder="Search..."/>
+              <input
+                className="outline-none w-11/12"
+                type="text"
+                placeholder="Search..."
+              />
             </div>
           </div>
           <div className="flex flex-wrap md:flex-row md:gap-0 my-20">

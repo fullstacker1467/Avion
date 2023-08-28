@@ -2,7 +2,7 @@ import React from "react";
 export const FIcon = ({ item }) => {
   return (
     <>
-      <a href="#">
+      <a className="my-3" href="#">
         <i className={item}></i>
       </a>
     </>

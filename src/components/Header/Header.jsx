@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { NavItems } from "../../MiniApi";
-import "./Header.scss";
 import { NLink } from "../../modules/NLink";
+import "./Header.scss";
 
 function Header() {
   const [tap, setTap] = useState(true);
@@ -28,7 +28,14 @@ function Header() {
             <Link to={"/user"}>
               <i className="fa-solid fa-user text-slate-900 cursor-pointer hover:text-slate-500"></i>
             </Link>
-            <i onClick={navHandler} className="fa-solid fa-bars navhandler"></i>
+            <i
+              onClick={navHandler}
+              className={`${
+                tap
+                  ? "fa-solid fa-bars navhandler"
+                  : "fa-solid fa-xmark navhandler"
+              }`}
+            ></i>
           </div>
         </div>
       </div>

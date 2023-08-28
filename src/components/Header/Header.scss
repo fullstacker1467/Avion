@@ -19,17 +19,18 @@ header {
       .menu {
         width: 100%;
         flex-direction: column;
-        height: 90vh;
+        height: 95vh;
         align-items: center;
         justify-content: center;
         position: absolute;
         left: 0;
-        top: 90px;
-        background: slategray;
+        top: 70px;
+        background: rgb(46, 55, 65);
         color: white;
       }
       .menu.active {
         left: -100%;
+        overflow: hidden;
       }
       .left {
         .user {

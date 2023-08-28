@@ -31,7 +31,7 @@ function Product() {
               />
             </div>
           </div>
-          <div className="flex flex-wrap md:flex-row md:gap-0 my-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-20">
             {cerApi.map((item, index) => {
               return <ProCard key={index} item={item} />;
             })}

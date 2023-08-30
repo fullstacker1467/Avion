@@ -11,12 +11,12 @@ export const ProCard = ({ item }) => {
 
   const Card = useContext(useCard);
   const [active, setActive] = useState(false);
-  const [activ, setActiv] = useState(false);
+  const [saved, setSaved] = useState(false);
   const AddBacket = useCallback(
-    (e) => {
-      let abs = Card.data.find((fin) => fin.id == e.id);
-      if (!abs) {
-        Card.setData([...Card.data, { ...e }]);
+    (index) => {
+      let basketData = Card.data.find((item) => item.id == index.id);
+      if (!basketData) {
+        Card.setData([...Card.data, { ...index }]);
         setActive(true);
       }
     },
@@ -35,17 +35,17 @@ export const ProCard = ({ item }) => {
           <div className="px-2">
             <div className="flex justify-between items-center">
               <h2 className="text-xl">{item.title}</h2>
-              {!activ ? (
+              {!saved ? (
                 <i
                   onClick={() => {
-                    setActiv(!activ ? true : false);
+                    setSaved(!saved ? true : false);
                   }}
                   className="fa-regular fa-star text-2xl"
                 ></i>
               ) : (
                 <i
                   onClick={() => {
-                    setActiv(!activ ? true : false);
+                    setSaved(!saved ? true : false);
                   }}
                   class="fa-solid fa-star text-2xl text-yellow-500"
                 ></i>

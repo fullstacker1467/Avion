@@ -1,12 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./Product.scss";
 import { cerApi } from "../../MiniApi";
 import { ProCard } from "../../modules/ProCard";
-import { useCard } from "../../context/CardContext";
 
 function Product() {
-  const Card = useContext(useCard);
-  // console.log(Card.data);
   return (
     <>
       <div className="product">

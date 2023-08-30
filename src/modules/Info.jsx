@@ -1,6 +1,10 @@
-import React, { useCallback, useState } from "react";
-
+import React, { useCallback, useEffect,useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 export const Info = ({ item }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const [quantity, setQuantity] = useState(item.amount);
   const [iprice, setIprice] = useState(item.price);
   const increment = useCallback(() => {
@@ -13,31 +17,29 @@ export const Info = ({ item }) => {
   }, [setQuantity, setIprice]);
   return (
     <>
-      <tr className="flex justify-between my-4 items-center">
-        <td className="flex gap-3 w-2/5">
-          <img src={item.img} className="w-[100px]" />
-          <div className="flex flex-col justify-between">
+      <div
+        data-aos="fade-left"
+        className="flex justify-between items-center p-2 my-5 border-2 border-slate-400"
+      >
+        <div className="w-2/4 flex">
+          <img src={item.img} className="w-[100px] mr-2" />
+          <div className="flex flex-col justify-center gap-2">
             <h1 className="text-2xl">{item.title}</h1>
             <p>{item.body}</p>
             <h2 className="text-xl">$ {item.price}</h2>
           </div>
-        </td>
-        <td className="w-1/5 text-xl flex gap-3 justify-center items-center">
-          <i
-            onClick={dicrement}
-            className="fa-regular fa-square-minus cursor-pointer"
-          ></i>
-          <span className="text-xl">{quantity}</span>
-          <i
-            onClick={increment}
-            className="fa-regular fa-square-plus cursor-pointer"
-          ></i>
-        </td>
-        <td className="w-1/5 text-xl text-center">${iprice}</td>
-        <td className="w-1/5 text-xl text-center">
-          <i className="fa-solid fa-trash-can cursor-pointer"></i>
-        </td>
-      </tr>
+        </div>
+        <div className="w-1/4 text-center flex justify-center items-center gap-3">
+          <button onClick={dicrement} className="text-xl bg-slate-200 px-2">
+            -
+          </button>
+          <span className="text-2xl">{quantity}</span>
+          <button onClick={increment} className="text-xl bg-slate-200 px-2">
+            +
+          </button>
+        </div>
+        <h1 className="w-1/4 text-center">$ {iprice}</h1>
+      </div>
     </>
   );
 };

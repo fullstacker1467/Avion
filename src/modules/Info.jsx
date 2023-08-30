@@ -1,8 +1,6 @@
-import React, { useCallback, useContext, useState } from "react";
-import { useCard } from "../context/CardContext";
+import React, { useCallback, useState } from "react";
 
 export const Info = ({ item }) => {
-  const NewData = useContext(useCard);
   const [quantity, setQuantity] = useState(item.amount);
   const [iprice, setIprice] = useState(item.price);
   const increment = useCallback(() => {

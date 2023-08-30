@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./Basket.scss";
 import { useCard } from "../../context/CardContext";
 import { Info } from "../../modules/Info";
+import { NoInfo } from "../../modules/NoInfo";
 
 function Basket() {
   const BasketCard = useContext(useCard);
@@ -22,7 +23,7 @@ function Basket() {
                 return <Info key={index} item={item} />;
               })
             ) : (
-              <h1>NO DATA</h1>
+              <NoInfo />
             )}
           </tbody>
         </table>

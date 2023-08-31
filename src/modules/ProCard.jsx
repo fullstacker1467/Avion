@@ -47,7 +47,7 @@ export const ProCard = ({ item, but }) => {
                   onClick={() => {
                     setSaved(!saved ? true : false);
                   }}
-                  class="fa-solid fa-star text-2xl text-yellow-500"
+                  className="fa-solid fa-star text-2xl text-yellow-500"
                 ></i>
               )}
             </div>

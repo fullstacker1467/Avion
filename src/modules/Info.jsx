@@ -37,9 +37,9 @@ export const Info = ({ item, index }) => {
     <>
       <div
         data-aos="fade-left"
-        className="flex justify-between items-center p-2 my-5 border-2 border-slate-400"
+        className="flex flex-wrap justify-between items-center p-2 my-5 border-2 border-slate-400"
       >
-        <div className="w-2/5 flex">
+        <div className="w-full md:w-2/5 flex">
           <img src={item.img} className="w-[100px] mr-2" alt="" />
           <div className="flex flex-col justify-center gap-2">
             <h1 className="text-2xl">{item.title}</h1>
@@ -47,7 +47,7 @@ export const Info = ({ item, index }) => {
             <h2 className="text-xl">$ {item.price}</h2>
           </div>
         </div>
-        <div className="w-1/5 text-center flex justify-center items-center gap-3">
+        <div className="w-1/2 md:my-0 my-10 md:w-1/5 text-center flex justify-center items-center gap-3">
           <button
             onClick={() => decrement(index)}
             className="text-xl bg-slate-200 px-2"
@@ -62,11 +62,12 @@ export const Info = ({ item, index }) => {
             +
           </button>
         </div>
-        <h1 className="w-1/5 text-center">$ {item.price * item.amount}</h1>
-        <button onClick={() => del(item.id)} className="w-1/5">
+        <h1 className="w-1/2 md:my-0 my-10 md:w-1/5 text-center">Total: $ {item.price * item.amount}</h1>
+        <button onClick={() => del(item.id)} className="w-full md:w-1/5">
           <i className="fa-solid fa-trash text-xl"></i>
         </button>
       </div>
+      
     </>
   );
 };

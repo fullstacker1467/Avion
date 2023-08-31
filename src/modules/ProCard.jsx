@@ -4,24 +4,24 @@ import { Link } from "react-router-dom";
 import { useCard } from "../context/CardContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
-export const ProCard = ({ item }) => {
+export const ProCard = ({ item, but }) => {
   useEffect(() => {
     AOS.init();
   }, []);
 
   const Card = useContext(useCard);
-  const [active, setActive] = useState(false);
+
   const [saved, setSaved] = useState(false);
   const AddBacket = useCallback(
     (index) => {
       let basketData = Card.data.find((item) => item.id == index.id);
       if (!basketData) {
         Card.setData([...Card.data, { ...index }]);
-        setActive(true);
       }
     },
     [Card]
   );
+
   return (
     <>
       <div
@@ -56,14 +56,14 @@ export const ProCard = ({ item }) => {
                 Price: <span>${item.price}</span>
               </p>
               <button
-                disabled={active}
+                disabled={but}
                 onClick={() => AddBacket(item)}
                 className={` ${
-                  active ? "bg-blue-950" : "bg-slate-700"
+                  but ? "bg-slate-400" : "bg-slate-700"
                 } text-sm p-2 rounded-md text-white`}
               >
-                {active ? `Added To Card` : `Add To Card`}
-                {active ? (
+                {but ? `Added To Card` : `Add To Card`}
+                {but ? (
                   <i className="fa-solid fa-check mx-2"></i>
                 ) : (
                   <i className="fa-solid fa-bag-shopping mx-2"></i>

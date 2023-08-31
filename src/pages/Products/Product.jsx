@@ -2,8 +2,11 @@ import React from "react";
 import "./Product.scss";
 import { cerApi } from "../../MiniApi";
 import { ProCard } from "../../modules/ProCard";
+import { useContext } from "react";
+import { useCard } from "../../context/CardContext";
 
 function Product() {
+  const Card = useContext(useCard);
   return (
     <>
       <div className="product">
@@ -30,7 +33,11 @@ function Product() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-20">
             {cerApi.map((item, index) => {
-              return <ProCard key={index} item={item} />;
+              if (Card.data.find((as) => as.id == item.id)) {
+                return <ProCard key={index} item={item} but={true} />;
+              } else {
+                return <ProCard key={index} item={item} but={false} />;
+              }
             })}
           </div>
         </div>

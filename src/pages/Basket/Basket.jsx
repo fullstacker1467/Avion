@@ -23,7 +23,6 @@ function Basket() {
         ) : (
           <NoInfo />
         )}
-       
       </div>
     </div>
   );

@@ -14,11 +14,16 @@ function Home() {
   }, []);
   return (
     <>
-      <div className="home py-24">
+      <div className="home py-24 bg-blue-950 relative overflow-hidden">
+        <div className="circle xxlarge shade1"></div>
+        <div className="circle xlarge shade2"></div>
+        <div className="circle large shade3"></div>
+        <div className="circle mediun shade4"></div>
+        <div className="circle small shade5"></div>
         <div className="container flex justify-end items-center">
           <div
             data-aos="fade-right"
-            className="wrapper bg-slate-200 rounded-sm w-7/12 p-10 flex flex-col items-start gap-20"
+            className="wrapper bg-slate-200 relative rounded-sm w-7/12 p-10 flex flex-col items-start gap-20"
           >
             <h1 className="text-5xl">
               Luxury homeware for people who love timeless design quality

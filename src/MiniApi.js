@@ -44,7 +44,7 @@ export const cerApi = [
   {
     id: 1,
     img: "./img/p1.png",
-    title: "The Dandy chair",
+    title: "the dandy chair",
     body: "A timeless ceramic vase with a tri color grey glaze",
     price: 250,
     amount: 1,
@@ -52,7 +52,7 @@ export const cerApi = [
   {
     id: 2,
     img: "./img/p2.png",
-    title: "Rustic Vase Set",
+    title: "rustic vase set",
     body: "A timeless ceramic vase with a tri color grey glaze",
     price: 155,
     amount: 1,
@@ -60,7 +60,7 @@ export const cerApi = [
   {
     id: 3,
     img: "./img/p3.png",
-    title: "The Silky Vase",
+    title: "the silky vase",
     body: "A timeless ceramic vase with a tri color grey glaze",
     price: 125,
     amount: 1,
@@ -68,7 +68,7 @@ export const cerApi = [
   {
     id: 4,
     img: "./img/p4.png",
-    title: "The Lucy Lamp",
+    title: "the lucy lamp",
     body: "A timeless ceramic vase with a tri color grey glaze",
     price: 399,
     amount: 1,
@@ -76,7 +76,7 @@ export const cerApi = [
   {
     id: 5,
     img: "./img/p5.png",
-    title: "The Lucy Lamp",
+    title: "the lucy lamp",
     body: "A timeless ceramic vase with a tri color grey glaze",
     price: 399,
     amount: 1,
@@ -84,7 +84,7 @@ export const cerApi = [
   {
     id: 6,
     img: "./img/p6.png",
-    title: "The Lucy Lamp",
+    title: "the lucy lamp",
     body: "A timeless ceramic vase with a tri color grey glaze",
     price: 399,
     amount: 1,
@@ -92,7 +92,7 @@ export const cerApi = [
   {
     id: 7,
     img: "./img/p7.png",
-    title: "The Lucy Lamp",
+    title: "the lucy lamp",
     body: "A timeless ceramic vase with a tri color grey glaze",
     price: 399,
     amount: 1,
@@ -100,7 +100,7 @@ export const cerApi = [
   {
     id: 8,
     img: "./img/p8.png",
-    title: "The Lucy Lamp",
+    title: "the lucy lamp",
     body: "A timeless ceramic vase with a tri color grey glaze",
     price: 399,
     amount: 1,

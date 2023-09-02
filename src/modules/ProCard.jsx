@@ -34,7 +34,7 @@ export const ProCard = ({ item, but }) => {
           </div>
           <div className="px-2">
             <div className="flex justify-between items-center">
-              <h2 className="text-xl">{item.title}</h2>
+              <h2 className="text-xl capitalize">{item.title}</h2>
               {!saved ? (
                 <i
                   onClick={() => {
